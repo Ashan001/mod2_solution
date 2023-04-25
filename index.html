@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Simple Website</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* desktop view */
+    .section {
+      float: left;
+      width: 33.33%;
+      border: 1px solid black;
+      background-color: #ffd9cc;
+      padding: 20px;
+    }
+    
+    /* tablet view */
+    @media (max-width: 991px) and (min-width: 768px) {
+      .section {
+        width: 50%;
+        float: left;
+      }
+      
+      .section.third {
+        width: 100%;
+        clear: both;
+      }
+    }
+    
+    /* mobile view */
+    @media (max-width: 767px) {
+      .section {
+        width: 100%;
+        float: none;
+      }
+    }
+    
+    /* section title region */
+    .section-title {
+      position: relative;
+      text-align: right;
+      font-size: 125%;
+      padding: 10px;
+      background-color: #ff944d;
+      color: white;
+    }
+    
+    /* spacing */
+    body {
+      margin: 10px;
+    }
+    
+    .section {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    
+    .section:last-child {
+      margin-right: 0;
+    }
+    
+    .section > p {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Simple Website</h1>
+  
+  <div class="section">
+    <div class="section-title">Chicken</div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius risus nec tortor hendrerit, at scelerisque nisi bibendum. Nullam tincidunt vel lorem quis mattis. Nulla facilisi. Sed suscipit odio euismod leo posuere, eu varius nulla faucibus.</p>
+  </div>
+  
+  <div class="section">
+    <div class="section-title">Beef</div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius risus nec tortor hendrerit, at scelerisque nisi bibendum. Nullam tincidunt vel lorem quis mattis. Nulla facilisi. Sed suscipit odio euismod leo posuere, eu varius nulla faucibus.</p>
+  </div>
+  
+  <div class="section third">
+    <div class="section-title">Sushi</div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius risus nec tortor hendrerit, at scelerisque nisi bibendum. Nullam tincidunt vel lorem quis mattis. Nulla facilisi. Sed suscipit odio euismod leo posuere, eu varius nulla faucibus.</p>
+  </div>
+</body>
+</html>
